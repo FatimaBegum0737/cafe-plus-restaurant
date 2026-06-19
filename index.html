@@ -1,0 +1,1044 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Cafe & Restaurant | Premium Fine Dining Experience</title>
+<meta name="description" content="Royal Cafe & Restaurant — an exquisite fine-dining destination serving breakfast, lunch, dinner, beverages and desserts crafted with royal devotion. Book your table today.">
+<meta name="keywords" content="Royal Cafe, fine dining restaurant, premium cafe, book a table, restaurant near me, luxury dining">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Royal Cafe & Restaurant | Premium Fine Dining">
+<meta property="og:description" content="An exquisite dining experience, truly fit for royalty. Explore our menu, gallery and reserve your table online.">
+<meta property="og:type" content="restaurant.menu">
+<meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80">
+<meta name="theme-color" content="#0b0a09">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%91%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Cormorant Garamond"', 'serif'],
+          body: ['"Outfit"', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Royal Cafe & Restaurant",
+  "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+  "servesCuisine": ["Continental", "Multi-cuisine", "Fine Dining"],
+  "priceRange": "$$$",
+  "telephone": "+91-80-4567-8899",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "24 Crown Avenue, Lakeview District",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "08:00", "closes": "00:00" }
+  ]
+}
+</script>
+
+<style>
+  /* ============ THEME TOKENS ============ */
+  :root{
+    --c-bg:#0b0a09;
+    --c-bg-alt:#14110f;
+    --c-surface:#1b1714;
+    --c-surface-2:#221c17;
+    --c-text:#f6efe2;
+    --c-text-soft:#c9c2b3;
+    --c-border:rgba(201,162,39,0.18);
+    --c-gold:#c9a227;
+    --c-gold-light:#e8c766;
+    --c-gold-deep:#9c7a1a;
+    --c-brown:#4a2e22;
+    --c-brown-light:#7a4b33;
+    --c-shadow:rgba(0,0,0,0.55);
+    --c-overlay:rgba(11,10,9,0.72);
+    --nav-bg:rgba(11,10,9,0.35);
+  }
+  [data-theme="light"]{
+    --c-bg:#f6efe2;
+    --c-bg-alt:#efe6d3;
+    --c-surface:#fffdf8;
+    --c-surface-2:#fbf6ea;
+    --c-text:#241b12;
+    --c-text-soft:#5b5044;
+    --c-border:rgba(74,46,34,0.16);
+    --c-gold:#a9821c;
+    --c-gold-light:#c79f33;
+    --c-gold-deep:#7d6116;
+    --c-brown:#4a2e22;
+    --c-brown-light:#7a4b33;
+    --c-shadow:rgba(74,46,34,0.15);
+    --c-overlay:rgba(246,239,226,0.88);
+    --nav-bg:rgba(246,239,226,0.55);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--c-bg);
+    color:var(--c-text);
+    font-family:'Outfit',sans-serif;
+    overflow-x:hidden;
+    transition:background .5s ease, color .5s ease;
+  }
+  section{scroll-margin-top:84px;}
+  ::selection{background:var(--c-gold); color:#0b0a09;}
+
+  /* scrollbar */
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-track{background:var(--c-bg);}
+  ::-webkit-scrollbar-thumb{background:var(--c-gold-deep); border-radius:10px;}
+
+  h1,h2,h3,h4,.font-display{font-family:'Cormorant Garamond',serif;}
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:.75rem;
+    font-size:.78rem; letter-spacing:.25em; text-transform:uppercase;
+    color:var(--c-gold); font-weight:500;
+  }
+  .eyebrow::before, .eyebrow::after{content:''; width:28px; height:1px; background:var(--c-gold);}
+
+  /* ============ ORNAMENTAL DIVIDER (signature element) ============ */
+  .orn-divider{ display:flex; align-items:center; justify-content:center; gap:14px; margin:0 auto; width:fit-content;}
+  .orn-divider .line{ height:1px; width:60px; background:linear-gradient(90deg, transparent, var(--c-gold)); opacity:.7;}
+  .orn-divider .line.right{ background:linear-gradient(90deg, var(--c-gold), transparent);}
+  .orn-divider .gem{ width:9px; height:9px; border:1px solid var(--c-gold); transform:rotate(45deg);}
+  .orn-divider .gem::after{content:''; position:absolute;}
+
+  /* ============ BUTTONS ============ */
+  .btn-gold{
+    position:relative; overflow:hidden; isolation:isolate;
+    background:linear-gradient(135deg, var(--c-gold-light), var(--c-gold-deep));
+    color:#161310; font-weight:600; letter-spacing:.03em;
+    padding:.95rem 2.1rem; border-radius:3px; display:inline-flex; align-items:center; gap:.6rem;
+    transition:transform .35s ease, box-shadow .35s ease;
+    box-shadow:0 8px 24px -8px rgba(201,162,39,0.55);
+  }
+  .btn-gold:hover{ transform:translateY(-3px); box-shadow:0 14px 30px -8px rgba(201,162,39,0.65);}
+  .btn-gold::before{
+    content:''; position:absolute; inset:0; z-index:-1;
+    background:linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%);
+    transform:translateX(-120%);
+    transition:transform .7s ease;
+  }
+  .btn-gold:hover::before{ transform:translateX(120%);}
+
+  .btn-outline{
+    position:relative; border:1px solid rgba(246,239,226,0.55); color:var(--c-text);
+    padding:.95rem 2.1rem; border-radius:3px; display:inline-flex; align-items:center; gap:.6rem;
+    background:rgba(255,255,255,0.04); backdrop-filter:blur(6px);
+    transition:all .35s ease; font-weight:500;
+  }
+  .btn-outline:hover{ background:var(--c-gold); color:#161310; border-color:var(--c-gold); transform:translateY(-3px);}
+
+  .btn-ghost-sm{
+    border:1px solid var(--c-border); color:var(--c-text); padding:.55rem 1.3rem; border-radius:3px;
+    font-size:.85rem; letter-spacing:.04em; transition:all .3s ease;
+  }
+  .btn-ghost-sm:hover{ background:var(--c-gold); border-color:var(--c-gold); color:#161310;}
+
+  /* ============ NAVBAR ============ */
+  #navbar{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:var(--nav-bg); backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;
+    transition:background .4s ease, padding .4s ease, border-color .4s ease;
+    padding:1.1rem 0;
+  }
+  #navbar.scrolled{
+    background:var(--c-bg); border-bottom:1px solid var(--c-border); padding:.65rem 0;
+    box-shadow:0 10px 30px -15px var(--c-shadow);
+  }
+  .nav-link{ position:relative; font-size:.86rem; letter-spacing:.04em; color:var(--c-text); padding-bottom:6px;}
+  .nav-link::after{
+    content:''; position:absolute; left:0; bottom:0; height:1px; width:0; background:var(--c-gold);
+    transition:width .35s ease;
+  }
+  .nav-link:hover::after, .nav-link.active::after{ width:100%;}
+
+  .logo-crest circle, .logo-crest text{ stroke:var(--c-gold); fill:var(--c-gold);}
+
+  .theme-toggle{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--c-border);
+    display:flex; align-items:center; justify-content:center; color:var(--c-gold); cursor:pointer;
+    transition:all .3s ease; background:transparent;
+  }
+  .theme-toggle:hover{ background:var(--c-gold); color:#161310;}
+
+  /* mobile menu */
+  #mobile-menu{
+    position:fixed; inset:0; z-index:60; background:var(--c-bg);
+    transform:translateY(-100%); transition:transform .5s cubic-bezier(.77,0,.18,1);
+    display:flex; flex-direction:column; justify-content:center; align-items:center; gap:1.6rem;
+  }
+  #mobile-menu.open{ transform:translateY(0);}
+
+  /* ============ HERO ============ */
+  #hero{ position:relative; height:100vh; min-height:640px; display:flex; align-items:center; overflow:hidden;}
+  #hero .bg-img{
+    position:absolute; inset:0; width:100%; height:115%; object-fit:cover;
+    will-change:transform;
+  }
+  #hero .overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,10,9,0.55) 0%, rgba(11,10,9,0.65) 45%, rgba(11,10,9,0.92) 100%);
+  }
+  .hero-float{
+    position:absolute; padding:.9rem 1.3rem; border-radius:6px;
+    background:rgba(20,17,15,0.55); border:1px solid rgba(201,162,39,0.3);
+    backdrop-filter:blur(10px); color:#f6efe2; font-size:.85rem;
+    animation:float 6s ease-in-out infinite alternate;
+  }
+  @keyframes float{ from{transform:translateY(0px);} to{transform:translateY(-14px);} }
+
+  .shimmer-text{
+    background:linear-gradient(90deg, var(--c-gold-light) 0%, var(--c-gold) 25%, var(--c-gold-light) 50%, var(--c-gold) 75%, var(--c-gold-light) 100%);
+    background-size:300% auto; -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:shimmer 6s linear infinite;
+  }
+  @keyframes shimmer{ to{ background-position:300% center;} }
+
+  .scroll-cue{ position:absolute; bottom:28px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; color:#f6efe2; opacity:.8;}
+  .scroll-cue .mouse{ width:24px; height:38px; border:1px solid rgba(246,239,226,0.6); border-radius:14px; position:relative;}
+  .scroll-cue .mouse::before{
+    content:''; position:absolute; top:7px; left:50%; transform:translateX(-50%);
+    width:4px; height:8px; background:var(--c-gold); border-radius:2px;
+    animation:scrollDot 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollDot{ 0%{opacity:1; top:7px;} 70%{opacity:0; top:20px;} 100%{opacity:0; top:7px;} }
+
+  /* ============ SECTIONS GENERIC ============ */
+  .surface{ background:var(--c-surface); border:1px solid var(--c-border);}
+  .surface-2{ background:var(--c-surface-2); border:1px solid var(--c-border);}
+
+  /* ============ ABOUT COUNTERS ============ */
+  .counter-num{ font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:600; color:var(--c-gold); line-height:1;}
+
+  .about-frame{
+    position:relative; border-radius:6px; overflow:hidden; border:1px solid var(--c-border);
+    box-shadow:0 30px 60px -25px var(--c-shadow);
+  }
+  .about-frame img{ width:100%; height:100%; object-fit:cover; transition:transform .8s ease;}
+  .about-frame:hover img{ transform:scale(1.08);}
+
+  /* ============ MENU ============ */
+  .menu-tab{
+    position:relative; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase;
+    padding:.55rem .3rem; color:var(--c-text-soft); transition:color .3s ease;
+  }
+  .menu-tab::after{ content:''; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--c-gold); transition:width .35s ease;}
+  .menu-tab.active{ color:var(--c-gold);}
+  .menu-tab.active::after{ width:100%;}
+
+  .menu-card{
+    background:var(--c-surface); border:1px solid var(--c-border); border-radius:8px; overflow:hidden;
+    transition:transform .45s ease, box-shadow .45s ease, border-color .45s ease;
+  }
+  .menu-card:hover{ transform:translateY(-8px); box-shadow:0 25px 45px -20px var(--c-shadow); border-color:var(--c-gold);}
+  .menu-card .img-wrap{ position:relative; height:200px; overflow:hidden;}
+  .menu-card .img-wrap img{ width:100%; height:100%; object-fit:cover; transition:transform .7s ease;}
+  .menu-card:hover .img-wrap img{ transform:scale(1.12);}
+  .menu-card .price-tag{
+    position:absolute; top:14px; right:14px; background:var(--c-gold); color:#161310;
+    font-weight:600; font-size:.85rem; padding:.3rem .7rem; border-radius:3px;
+  }
+  .dotted-rule{ flex:1; border-bottom:1px dotted var(--c-border); margin:0 .6rem; transform:translateY(-4px);}
+
+  .menu-card.hidden-card{ display:none;}
+  .menu-card.fade-in{ animation:fadeUp .5s ease both;}
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);} }
+
+  /* ============ OFFERS ============ */
+  .offer-card{
+    position:relative; border-radius:10px; overflow:hidden; padding:2.2rem;
+    background:linear-gradient(155deg, var(--c-surface), var(--c-surface-2));
+    border:1px solid var(--c-border);
+    transition:transform .5s ease, box-shadow .5s ease;
+  }
+  .offer-card:hover{ transform:translateY(-10px) rotate(-0.3deg); box-shadow:0 30px 55px -25px var(--c-shadow);}
+  .ribbon{
+    position:absolute; top:18px; right:-34px; transform:rotate(45deg);
+    background:var(--c-gold); color:#161310; font-weight:700; font-size:.75rem;
+    padding:.3rem 2.6rem; box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    animation:pulseRibbon 2.4s ease-in-out infinite;
+  }
+  @keyframes pulseRibbon{ 0%,100%{filter:brightness(1);} 50%{filter:brightness(1.25);} }
+
+  /* ============ GALLERY / MASONRY ============ */
+  .masonry{ column-count:1; column-gap:14px;}
+  @media(min-width:640px){ .masonry{ column-count:2;} }
+  @media(min-width:1024px){ .masonry{ column-count:3;} }
+  .masonry .g-item{ margin-bottom:14px; break-inside:avoid; position:relative; overflow:hidden; border-radius:8px; cursor:zoom-in;}
+  .masonry .g-item img{ width:100%; display:block; transition:transform .6s ease, filter .6s ease;}
+  .masonry .g-item:hover img{ transform:scale(1.1); filter:brightness(.75);}
+  .masonry .g-item::after{
+    content:'\f00e'; font-family:'Font Awesome 6 Free'; font-weight:900; color:#f6efe2;
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-size:1.4rem; opacity:0; transition:opacity .4s ease;
+  }
+  .masonry .g-item:hover::after{ opacity:1;}
+
+  #lightbox{ position:fixed; inset:0; z-index:100; background:rgba(8,7,6,0.94); display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .4s ease;}
+  #lightbox.open{ opacity:1; pointer-events:auto;}
+  #lightbox img{ max-height:82vh; max-width:88vw; border-radius:6px; box-shadow:0 30px 80px rgba(0,0,0,0.6);}
+
+  /* ============ TESTIMONIALS ============ */
+  .t-track{ display:flex; transition:transform .6s cubic-bezier(.65,0,.35,1);}
+  .t-slide{ min-width:100%; padding:0 .5rem;}
+  .stars i{ color:var(--c-gold); font-size:.85rem;}
+  .t-dot{ width:8px; height:8px; border-radius:50%; background:var(--c-border); cursor:pointer; transition:all .3s ease;}
+  .t-dot.active{ background:var(--c-gold); width:22px; border-radius:5px;}
+
+  /* ============ RESERVATION ============ */
+  .field-input{
+    width:100%; background:transparent; border:1px solid var(--c-border); color:var(--c-text);
+    padding:.85rem 1rem; border-radius:4px; font-size:.92rem; transition:border-color .3s ease, box-shadow .3s ease;
+  }
+  .field-input::placeholder{ color:var(--c-text-soft);}
+  .field-input:focus{ outline:none; border-color:var(--c-gold); box-shadow:0 0 0 3px rgba(201,162,39,0.15);}
+  .field-label{ font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--c-text-soft); margin-bottom:.4rem; display:block;}
+
+  .success-check{ width:78px; height:78px; margin:0 auto;}
+  .success-check-circle{ stroke:var(--c-gold); stroke-width:2; stroke-dasharray:166; stroke-dashoffset:166; animation:circleDraw .6s ease forwards;}
+  .success-check-mark{ stroke:var(--c-gold); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:48; stroke-dashoffset:48; animation:checkDraw .4s .55s ease forwards;}
+  @keyframes circleDraw{ to{stroke-dashoffset:0;} }
+  @keyframes checkDraw{ to{stroke-dashoffset:0;} }
+
+  /* ============ CONTACT ============ */
+  .contact-icon{
+    width:42px; height:42px; border-radius:50%; border:1px solid var(--c-border); color:var(--c-gold);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .social-icon{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--c-border); color:var(--c-text);
+    display:flex; align-items:center; justify-content:center; transition:all .3s ease;
+  }
+  .social-icon:hover{ background:var(--c-gold); color:#161310; border-color:var(--c-gold); transform:translateY(-3px);}
+
+  /* ============ FOOTER ============ */
+  footer{ background:var(--c-bg-alt); border-top:1px solid var(--c-border);}
+  .footer-link{ color:var(--c-text-soft); transition:color .3s ease, padding-left .3s ease;}
+  .footer-link:hover{ color:var(--c-gold); padding-left:4px;}
+
+  /* ============ MISC ============ */
+  #back-to-top{
+    position:fixed; bottom:26px; right:26px; z-index:40; width:46px; height:46px; border-radius:50%;
+    background:var(--c-gold); color:#161310; display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transform:translateY(10px); transition:all .4s ease; box-shadow:0 10px 25px -10px rgba(0,0,0,0.5);
+  }
+  #back-to-top.show{ opacity:1; pointer-events:auto; transform:translateY(0);}
+
+  #preloader{
+    position:fixed; inset:0; z-index:200; background:var(--c-bg); display:flex; flex-direction:column; gap:18px;
+    align-items:center; justify-content:center; transition:opacity .6s ease, visibility .6s ease;
+  }
+  #preloader.hide{ opacity:0; visibility:hidden;}
+  .pre-ring{ width:64px; height:64px; border-radius:50%; border:2px solid var(--c-border); border-top-color:var(--c-gold); animation:spin 1s linear infinite;}
+  @keyframes spin{ to{transform:rotate(360deg);} }
+
+  .toast{
+    position:fixed; bottom:26px; left:26px; z-index:80; background:var(--c-surface); border:1px solid var(--c-gold);
+    color:var(--c-text); padding:.9rem 1.3rem; border-radius:6px; transform:translateY(20px); opacity:0;
+    transition:all .4s ease; pointer-events:none; max-width:320px;
+  }
+  .toast.show{ transform:translateY(0); opacity:1;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body data-theme="dark" class="font-body">
+
+<!-- ===================== PRELOADER ===================== -->
+<div id="preloader">
+  <svg viewBox="0 0 100 100" class="logo-crest" width="56" height="56">
+    <circle cx="50" cy="50" r="46" fill="none" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke-width="0.75" stroke-dasharray="2 4"/>
+    <text x="50" y="62" text-anchor="middle" font-size="34" font-weight="600">R</text>
+  </svg>
+  <div class="pre-ring"></div>
+  <p class="eyebrow" style="font-size:.65rem;">loading royal experience</p>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header id="navbar">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3">
+      <svg viewBox="0 0 100 100" class="logo-crest" width="42" height="42">
+        <circle cx="50" cy="50" r="46" fill="none" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke-width="0.75" stroke-dasharray="2 4"/>
+        <text x="50" y="62" text-anchor="middle" font-size="34" font-weight="600">R</text>
+      </svg>
+      <div class="leading-none">
+        <p class="font-display text-lg tracking-wide" style="color:var(--c-text)">ROYAL</p>
+        <p class="text-[10px] tracking-[0.25em] uppercase" style="color:var(--c-gold)">Cafe &amp; Restaurant</p>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="#hero" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#offers" class="nav-link">Offers</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark or light mode">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+      <a href="#reservation" class="btn-gold hidden md:inline-flex !py-2 !px-5 text-sm">Book a Table</a>
+      <button id="menu-open" class="lg:hidden text-2xl" style="color:var(--c-gold)" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE MENU ===================== -->
+<div id="mobile-menu">
+  <button id="menu-close" class="absolute top-6 right-6 text-3xl" style="color:var(--c-gold)" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#hero" class="mobile-link font-display text-2xl">Home</a>
+  <a href="#about" class="mobile-link font-display text-2xl">About</a>
+  <a href="#menu" class="mobile-link font-display text-2xl">Menu</a>
+  <a href="#offers" class="mobile-link font-display text-2xl">Offers</a>
+  <a href="#gallery" class="mobile-link font-display text-2xl">Gallery</a>
+  <a href="#reviews" class="mobile-link font-display text-2xl">Reviews</a>
+  <a href="#reservation" class="mobile-link font-display text-2xl">Reservation</a>
+  <a href="#contact" class="mobile-link font-display text-2xl">Contact</a>
+  <a href="#reservation" class="btn-gold mt-4">Book a Table</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <img id="hero-bg" class="bg-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1900&q=80" alt="Elegant candlelit table setting at Royal Cafe & Restaurant">
+  <div class="overlay"></div>
+
+  <div class="hero-float hidden md:flex items-center gap-3" style="top:28%; left:6%;" data-aos="fade-right" data-aos-delay="900">
+    <i class="fa-solid fa-star text-[var(--c-gold)]"></i>
+    <span>4.9 average rating · 2,000+ guests</span>
+  </div>
+  <div class="hero-float hidden md:flex items-center gap-3" style="bottom:18%; right:6%; animation-delay:1.2s;" data-aos="fade-left" data-aos-delay="1100">
+    <i class="fa-solid fa-clock text-[var(--c-gold)]"></i>
+    <span>Open daily · 9:00 AM – 11:00 PM</span>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <p class="eyebrow justify-center mb-6" data-aos="fade-up">Welcome to Royal Cafe &amp; Restaurant</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mb-6" data-aos="fade-up" data-aos-delay="120">
+      An Exquisite Dining<br> Experience, <span class="shimmer-text italic">Truly Fit for Royalty</span>
+    </h1>
+    <p class="max-w-xl mx-auto text-[var(--c-text-soft)] mb-10 text-[15px] leading-relaxed" style="color:#d9d3c4" data-aos="fade-up" data-aos-delay="220">
+      From slow-simmered classics to artfully plated modern fare — every dish is prepared with the care of a feast fit for kings, served in a setting designed for unforgettable evenings.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="320">
+      <a href="#reservation" class="btn-gold"><i class="fa-solid fa-calendar-check"></i> Book a Table</a>
+      <a href="#menu" class="btn-outline"><i class="fa-solid fa-utensils"></i> View Menu</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><div class="mouse"></div><span class="text-[10px] tracking-[0.2em] uppercase">Scroll</span></div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="py-24 lg:py-32 px-6" style="background:var(--c-bg)">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <div data-aos="fade-right">
+      <p class="eyebrow mb-5">Our Story</p>
+      <h2 class="font-display text-4xl lg:text-[2.7rem] leading-tight mb-6">Three Generations of<br> Royal Hospitality</h2>
+      <p class="text-[var(--c-text-soft)] leading-relaxed mb-5">Royal Cafe &amp; Restaurant began in 2005 as a single candlelit table in the heart of the city — a humble promise to treat every guest like family, and every dish like an heirloom recipe worth perfecting.</p>
+      <p class="text-[var(--c-text-soft)] leading-relaxed mb-10">Today, that promise has grown into a celebrated address for refined dining, where our chefs blend time-honoured technique with modern artistry, and every plate is finished with the same devotion as our very first.</p>
+
+      <div class="grid grid-cols-3 gap-6">
+        <div class="counter-block text-center sm:text-left">
+          <p class="counter-num" data-count="18">0</p>
+          <p class="text-xs tracking-wide uppercase mt-1 text-[var(--c-text-soft)]">Years of Excellence</p>
+        </div>
+        <div class="counter-block text-center sm:text-left">
+          <p class="counter-num" data-count="25000">0</p>
+          <p class="text-xs tracking-wide uppercase mt-1 text-[var(--c-text-soft)]">Happy Customers</p>
+        </div>
+        <div class="counter-block text-center sm:text-left">
+          <p class="counter-num" data-count="180000">0</p>
+          <p class="text-xs tracking-wide uppercase mt-1 text-[var(--c-text-soft)]">Dishes Served</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative grid grid-cols-2 gap-4" data-aos="fade-left">
+      <div class="about-frame h-72 col-span-2"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Royal Cafe & Restaurant elegant dining interior" loading="lazy"></div>
+      <div class="about-frame h-48"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80" alt="Gourmet plated burger at Royal Cafe" loading="lazy"></div>
+      <div class="about-frame h-48"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=600&q=80" alt="Barista preparing coffee at Royal Cafe" loading="lazy"></div>
+    </div>
+  </div>
+
+  <div class="orn-divider mt-24"><span class="line"></span><span class="gem relative"></span><span class="line right"></span></div>
+</section>
+
+<!-- ===================== MENU ===================== -->
+<section id="menu" class="py-24 lg:py-32 px-6" style="background:var(--c-bg-alt)">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="eyebrow justify-center mb-5">Taste the Royalty</p>
+      <h2 class="font-display text-4xl lg:text-5xl">Our Featured Menu</h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-8 mb-14" data-aos="fade-up" id="menu-tabs">
+      <button class="menu-tab active" data-cat="breakfast">Breakfast</button>
+      <button class="menu-tab" data-cat="lunch">Lunch</button>
+      <button class="menu-tab" data-cat="dinner">Dinner</button>
+      <button class="menu-tab" data-cat="beverages">Beverages</button>
+      <button class="menu-tab" data-cat="desserts">Desserts</button>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7" id="menu-grid"></div>
+  </div>
+</section>
+
+<!-- ===================== OFFERS ===================== -->
+<section id="offers" class="py-24 lg:py-32 px-6" style="background:var(--c-bg)">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="eyebrow justify-center mb-5">Limited Time</p>
+      <h2 class="font-display text-4xl lg:text-5xl">Exclusive Offers For You</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="ribbon">20% OFF</div>
+        <i class="fa-solid fa-mug-saucer text-3xl mb-5" style="color:var(--c-gold)"></i>
+        <h3 class="font-display text-2xl mb-3">Royal Weekend Brunch</h3>
+        <p class="text-[var(--c-text-soft)] mb-6">Gather the table for our signature weekend spread — 20% off every brunch dish, Saturday &amp; Sunday, 9:00 AM – 1:00 PM.</p>
+        <a href="#reservation" class="btn-ghost-sm">Claim Offer</a>
+      </div>
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="ribbon">FREE DESSERT</div>
+        <i class="fa-solid fa-heart text-3xl mb-5" style="color:var(--c-gold)"></i>
+        <h3 class="font-display text-2xl mb-3">Date Night Duo</h3>
+        <p class="text-[var(--c-text-soft)] mb-6">Order any two main courses of an evening and let us surprise you with a complimentary dessert, on the house.</p>
+        <a href="#reservation" class="btn-ghost-sm">Claim Offer</a>
+      </div>
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="ribbon">BOGO</div>
+        <i class="fa-solid fa-wine-glass text-3xl mb-5" style="color:var(--c-gold)"></i>
+        <h3 class="font-display text-2xl mb-3">Royal Happy Hour</h3>
+        <p class="text-[var(--c-text-soft)] mb-4">Buy one, get one free on select beverages, every day between 4:00 PM and 6:00 PM.</p>
+        <div class="flex items-center gap-2 text-sm mb-6" style="color:var(--c-gold)">
+          <i class="fa-regular fa-clock"></i><span>Ends in <span id="offer-countdown">--:--:--</span></span>
+        </div>
+        <a href="#reservation" class="btn-ghost-sm">Claim Offer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section id="gallery" class="py-24 lg:py-32 px-6" style="background:var(--c-bg-alt)">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="eyebrow justify-center mb-5">Moments</p>
+      <h2 class="font-display text-4xl lg:text-5xl">A Glimpse Into Royal Cafe</h2>
+    </div>
+    <div class="masonry" id="gallery-grid" data-aos="fade-up"></div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <button id="lb-close" class="absolute top-6 right-6 text-3xl text-white" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button id="lb-prev" class="absolute left-4 sm:left-10 text-3xl text-white" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lb-img" src="" alt="Royal Cafe gallery image">
+  <button id="lb-next" class="absolute right-4 sm:right-10 text-3xl text-white" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" class="py-24 lg:py-32 px-6 overflow-hidden" style="background:var(--c-bg)">
+  <div class="max-w-3xl mx-auto text-center mb-14" data-aos="fade-up">
+    <p class="eyebrow justify-center mb-5">Testimonials</p>
+    <h2 class="font-display text-4xl lg:text-5xl">What Our Guests Say</h2>
+  </div>
+
+  <div class="max-w-3xl mx-auto relative" data-aos="zoom-in">
+    <i class="fa-solid fa-quote-left text-4xl mb-6 block text-center" style="color:var(--c-gold); opacity:.5"></i>
+    <div class="overflow-hidden">
+      <div class="t-track" id="t-track"></div>
+    </div>
+    <div class="flex justify-center gap-2 mt-8" id="t-dots"></div>
+    <button id="t-prev" class="hidden sm:flex absolute -left-4 sm:-left-14 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full items-center justify-center border" style="border-color:var(--c-border); color:var(--c-gold)"><i class="fa-solid fa-chevron-left"></i></button>
+    <button id="t-next" class="hidden sm:flex absolute -right-4 sm:-right-14 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full items-center justify-center border" style="border-color:var(--c-border); color:var(--c-gold)"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- ===================== RESERVATION ===================== -->
+<section id="reservation" class="py-24 lg:py-32 px-6" style="background:var(--c-bg-alt)">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 rounded-xl overflow-hidden surface" style="box-shadow:0 40px 80px -30px var(--c-shadow)">
+    <div class="relative h-72 lg:h-auto" data-aos="fade-right">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover" alt="Beautifully plated steak dinner ready for reservation guests" loading="lazy">
+      <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(11,10,9,0.2), rgba(11,10,9,0.75))"></div>
+      <div class="absolute bottom-8 left-8 right-8">
+        <p class="font-display text-2xl italic text-white leading-snug">"Where every meal feels like a celebration."</p>
+      </div>
+    </div>
+
+    <div class="p-8 sm:p-12" data-aos="fade-left">
+      <p class="eyebrow mb-4">Reserve Your Table</p>
+      <h2 class="font-display text-3xl lg:text-4xl mb-8">Book Your Royal Experience</h2>
+
+      <form id="reservation-form" class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="field-label">Full Name</label>
+          <input type="text" required class="field-input" placeholder="Your name">
+        </div>
+        <div>
+          <label class="field-label">Email Address</label>
+          <input type="email" required class="field-input" placeholder="you@example.com">
+        </div>
+        <div>
+          <label class="field-label">Phone Number</label>
+          <input type="tel" required class="field-input" placeholder="+91 90000 00000">
+        </div>
+        <div>
+          <label class="field-label">Guests</label>
+          <select required class="field-input">
+            <option value="">Select guests</option>
+            <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+            <option>4 Guests</option><option>5+ Guests</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Date</label>
+          <input type="date" required id="res-date" class="field-input">
+        </div>
+        <div>
+          <label class="field-label">Time</label>
+          <input type="time" required class="field-input">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label">Special Request (optional)</label>
+          <textarea rows="3" class="field-input" placeholder="Anniversary, window seating, allergies…"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="btn-gold w-full justify-center"><i class="fa-solid fa-circle-check"></i> Confirm Reservation</button>
+        </div>
+      </form>
+
+      <div id="reservation-success" class="hidden text-center py-6">
+        <svg class="success-check" viewBox="0 0 52 52"><circle class="success-check-circle" cx="26" cy="26" r="25"/><path class="success-check-mark" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+        <h3 class="font-display text-2xl mt-5 mb-2">Reservation Confirmed!</h3>
+        <p class="text-[var(--c-text-soft)] mb-6">We look forward to hosting you at Royal Cafe &amp; Restaurant.</p>
+        <button id="res-reset" class="btn-ghost-sm">Book Another Table</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="py-24 lg:py-32 px-6" style="background:var(--c-bg)">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="eyebrow justify-center mb-5">Get In Touch</p>
+      <h2 class="font-display text-4xl lg:text-5xl">Visit or Contact Us</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+      <div data-aos="fade-right">
+        <form id="contact-form" class="surface rounded-xl p-8 sm:p-10 grid gap-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <input type="text" required class="field-input" placeholder="Your name">
+            <input type="email" required class="field-input" placeholder="Your email">
+          </div>
+          <input type="text" required class="field-input" placeholder="Subject">
+          <textarea rows="4" required class="field-input" placeholder="Your message"></textarea>
+          <button type="submit" class="btn-gold justify-center"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+
+      <div data-aos="fade-left" class="grid gap-6">
+        <div class="surface rounded-xl p-7 grid gap-5">
+          <div class="flex gap-4 items-start">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div><p class="font-medium mb-1">Address</p><p class="text-[var(--c-text-soft)] text-sm">Kalaburagi, Karnataka, India</p></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div><p class="font-medium mb-1">Phone</p><p class="text-[var(--c-text-soft)] text-sm">+91 80 4567 8899</p></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><p class="font-medium mb-1">Email</p><p class="text-[var(--c-text-soft)] text-sm">reservations@royalcafe.com</p></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+            <div><p class="font-medium mb-1">Hours</p><p class="text-[var(--c-text-soft)] text-sm">Mon–Fri 9:00 AM–11:00 PM · Sat–Sun 8:00 AM–12:00 AM</p></div>
+          </div>
+          <div class="flex gap-3 pt-2">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden surface" style="height:220px">
+          <iframe src="https://maps.google.com/maps?q=Bengaluru,Karnataka,India&z=14&output=embed" width="100%" height="100%" style="border:0; filter:grayscale(0.15) contrast(1.05);" loading="lazy" title="Royal Cafe & Restaurant location map"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="pt-20 pb-8 px-6">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
+    <div>
+      <div class="flex items-center gap-3 mb-5">
+        <svg viewBox="0 0 100 100" class="logo-crest" width="38" height="38">
+          <circle cx="50" cy="50" r="46" fill="none" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke-width="0.75" stroke-dasharray="2 4"/>
+          <text x="50" y="62" text-anchor="middle" font-size="34" font-weight="600">R</text>
+        </svg>
+        <p class="font-display text-lg">Royal Cafe &amp; Restaurant</p>
+      </div>
+      <p class="text-[var(--c-text-soft)] text-sm leading-relaxed mb-5">An exquisite dining destination where every plate is prepared with royal devotion and every guest is treated like family.</p>
+      <div class="flex gap-3">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="font-display text-xl mb-5">Quick Links</p>
+      <ul class="grid gap-3 text-sm">
+        <li><a href="#hero" class="footer-link">Home</a></li>
+        <li><a href="#about" class="footer-link">About Us</a></li>
+        <li><a href="#menu" class="footer-link">Menu</a></li>
+        <li><a href="#gallery" class="footer-link">Gallery</a></li>
+        <li><a href="#reservation" class="footer-link">Reservation</a></li>
+        <li><a href="#contact" class="footer-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-display text-xl mb-5">Opening Hours</p>
+      <ul class="grid gap-3 text-sm text-[var(--c-text-soft)]">
+        <li class="flex justify-between gap-4"><span>Mon – Fri</span><span>9:00 AM – 11:00 PM</span></li>
+        <li class="flex justify-between gap-4"><span>Sat – Sun</span><span>8:00 AM – 12:00 AM</span></li>
+        <li class="flex justify-between gap-4"><span>Happy Hour</span><span>4:00 PM – 6:00 PM</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-display text-xl mb-5">Newsletter</p>
+      <p class="text-[var(--c-text-soft)] text-sm mb-4">Subscribe for exclusive offers and seasonal menu launches.</p>
+      <form id="newsletter-form" class="flex gap-2">
+        <input type="email" required placeholder="Your email" class="field-input !py-2.5 text-sm">
+        <button type="submit" class="btn-ghost-sm !px-4"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p id="newsletter-msg" class="text-xs mt-3" style="color:var(--c-gold)"></p>
+    </div>
+  </div>
+
+  <div class="orn-divider mb-8"><span class="line"></span><span class="gem"></span><span class="line right"></span></div>
+  <p class="text-center text-xs text-[var(--c-text-soft)]">© <span id="year"></span> Royal Cafe &amp; Restaurant. All rights reserved.</p>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+<div class="toast" id="toast"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+(function(){
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  AOS.init({ duration: reduced ? 0 : 800, once: true, offset: 60 });
+
+  /* ---------- preloader ---------- */
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('preloader').classList.add('hide'), 500);
+  });
+
+  /* ---------- navbar scroll ---------- */
+  const navbar = document.getElementById('navbar');
+  const backTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+    backTop.classList.toggle('show', window.scrollY > 500);
+  });
+
+  /* ---------- hero parallax ---------- */
+  const heroBg = document.getElementById('hero-bg');
+  if(!reduced){
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if(y < window.innerHeight) heroBg.style.transform = `translateY(${y*0.25}px)`;
+    });
+  }
+
+  /* ---------- mobile menu ---------- */
+  const mMenu = document.getElementById('mobile-menu');
+  document.getElementById('menu-open').addEventListener('click', () => { mMenu.classList.add('open'); document.body.style.overflow='hidden'; });
+  document.getElementById('menu-close').addEventListener('click', closeMobile);
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMobile));
+  function closeMobile(){ mMenu.classList.remove('open'); document.body.style.overflow=''; }
+
+  /* ---------- active nav link on scroll ---------- */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => { if(window.scrollY >= sec.offsetTop - 150) current = sec.id; });
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#'+current));
+  });
+
+  /* ---------- theme toggle (in-memory only) ---------- */
+  const themeBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  themeBtn.addEventListener('click', () => {
+    const isLight = document.body.getAttribute('data-theme') === 'light';
+    document.body.setAttribute('data-theme', isLight ? 'dark' : 'light');
+    themeIcon.className = isLight ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+  });
+
+  /* ---------- counters ---------- */
+  const counters = document.querySelectorAll('.counter-num');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => counterObserver.observe(c));
+  function animateCounter(el){
+    const target = parseInt(el.dataset.count, 10);
+    const duration = reduced ? 0 : 1600;
+    const start = performance.now();
+    function tick(now){
+      const progress = duration === 0 ? 1 : Math.min((now-start)/duration, 1);
+      const eased = 1 - Math.pow(1-progress, 3);
+      el.textContent = Math.floor(eased*target).toLocaleString() + (target >= 1000 ? '+' : (el.dataset.count==='18' ? '+' : ''));
+      if(progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* ---------- menu data + render ---------- */
+  const menuData = {
+    breakfast: [
+      {name:"Royal Eggs Benedict", desc:"Poached eggs, smoked salmon, hollandaise, toasted brioche", price:"$14", img:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=500&q=80"},
+      {name:"Golden Pancake Stack", desc:"Buttermilk pancakes, maple butter, seasonal berries", price:"$11", img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80"},
+      {name:"Avocado & Burrata Toast", desc:"Sourdough, heirloom tomato, basil oil", price:"$13", img:"https://images.unsplash.com/photo-1533920379810-6bedac961555?auto=format&fit=crop&w=500&q=80"},
+      {name:"Continental Royale", desc:"Fresh croissant, preserves, cured meats, fruit", price:"$16", img:"https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=500&q=80"},
+    ],
+    lunch: [
+      {name:"Truffle Mushroom Risotto", desc:"Arborio rice, wild mushrooms, parmesan, truffle oil", price:"$22", img:"https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=500&q=80"},
+      {name:"Grilled Chicken Caesar", desc:"Romaine, parmesan crisp, garlic croutons, anchovy dressing", price:"$18", img:"https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80"},
+      {name:"Mediterranean Lamb Wrap", desc:"Slow-roasted lamb, tzatziki, pickled onion, flatbread", price:"$20", img:"https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=80"},
+      {name:"Royal Club Sandwich", desc:"Triple-stacked turkey, bacon, brie, herb aioli", price:"$17", img:"https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=500&q=80"},
+    ],
+    dinner: [
+      {name:"Herb-Crusted Rack of Lamb", desc:"Rosemary jus, roasted root vegetables", price:"$42", img:"https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=500&q=80"},
+      {name:"Pan-Seared Filet Mignon", desc:"Red wine reduction, truffle mash, asparagus", price:"$48", img:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80"},
+      {name:"Saffron Seafood Paella", desc:"Prawns, mussels, calamari, saffron rice", price:"$38", img:"https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=500&q=80"},
+      {name:"Wild Mushroom Wellington", desc:"Puff pastry, chestnut, red wine jus (vegetarian)", price:"$34", img:"https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80"},
+    ],
+    beverages: [
+      {name:"Royal Spiced Chai Latte", desc:"House-blended spices, steamed milk", price:"$7", img:"https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=500&q=80"},
+      {name:"Velvet Cold Brew", desc:"18-hour cold extraction, hint of vanilla", price:"$6", img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80"},
+      {name:"Golden Hour Mocktail", desc:"Passionfruit, ginger, soda, fresh mint", price:"$9", img:"https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=500&q=80"},
+      {name:"Estate Reserve Wine", desc:"Curated red or white, glass", price:"$14", img:"https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=80"},
+    ],
+    desserts: [
+      {name:"Molten Chocolate Crown", desc:"Warm chocolate cake, vanilla bean ice cream", price:"$12", img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80"},
+      {name:"Crème Brûlée Royale", desc:"Classic vanilla custard, caramelized top", price:"$10", img:"https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?auto=format&fit=crop&w=500&q=80"},
+      {name:"Pistachio Rose Cake", desc:"Layered sponge, rose cream, pistachio crumble", price:"$11", img:"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80"},
+      {name:"Seasonal Fruit Tart", desc:"Almond crust, pastry cream, glazed fruit", price:"$9", img:"https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=80"},
+    ],
+  };
+
+  const menuGrid = document.getElementById('menu-grid');
+  function renderMenu(cat){
+    menuGrid.innerHTML = '';
+    menuData[cat].forEach((item, i) => {
+      const card = document.createElement('div');
+      card.className = 'menu-card fade-in';
+      card.style.animationDelay = (i*80) + 'ms';
+      card.innerHTML = `
+        <div class="img-wrap"><img src="${item.img}" alt="${item.name} at Royal Cafe & Restaurant" loading="lazy"><span class="price-tag">${item.price}</span></div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-2">${item.name}</h3>
+          <p class="text-sm text-[var(--c-text-soft)] leading-relaxed">${item.desc}</p>
+        </div>`;
+      menuGrid.appendChild(card);
+    });
+  }
+  renderMenu('breakfast');
+  document.querySelectorAll('.menu-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      renderMenu(tab.dataset.cat);
+    });
+  });
+
+  /* ---------- offers countdown (to today/tomorrow 6PM) ---------- */
+  function updateCountdown(){
+    const now = new Date();
+    const end = new Date();
+    end.setHours(18,0,0,0);
+    if(now > end) end.setDate(end.getDate()+1);
+    const diff = end - now;
+    const h = String(Math.floor(diff/3600000)).padStart(2,'0');
+    const m = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+    const s = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    const el = document.getElementById('offer-countdown');
+    if(el) el.textContent = `${h}:${m}:${s}`;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ---------- gallery + lightbox ---------- */
+  const galleryImages = [
+    {src:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80", cap:"Royal dining hall"},
+    {src:"https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80", cap:"Signature steak dinner"},
+    {src:"https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=700&q=80", cap:"Evening ambience"},
+    {src:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80", cap:"Chef's plating"},
+    {src:"https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=700&q=80", cap:"Cafe corner"},
+    {src:"https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80", cap:"Gourmet burger"},
+    {src:"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80", cap:"Dessert finale"},
+    {src:"https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80", cap:"Fresh ingredients"},
+    {src:"https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=700&q=80", cap:"Lounge seating"},
+  ];
+  const galleryGrid = document.getElementById('gallery-grid');
+  galleryImages.forEach((g, i) => {
+    const div = document.createElement('div');
+    div.className = 'g-item';
+    div.innerHTML = `<img src="${g.src}" alt="${g.cap} — Royal Cafe & Restaurant" loading="lazy" data-idx="${i}">`;
+    galleryGrid.appendChild(div);
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  let currentIdx = 0;
+  function openLightbox(i){ currentIdx = i; lbImg.src = galleryImages[i].src; lightbox.classList.add('open'); }
+  function closeLightbox(){ lightbox.classList.remove('open'); }
+  galleryGrid.addEventListener('click', (e) => {
+    const img = e.target.closest('img');
+    if(img) openLightbox(parseInt(img.dataset.idx,10));
+  });
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', () => openLightbox((currentIdx-1+galleryImages.length)%galleryImages.length));
+  document.getElementById('lb-next').addEventListener('click', () => openLightbox((currentIdx+1)%galleryImages.length));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if(!lightbox.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowRight') openLightbox((currentIdx+1)%galleryImages.length);
+    if(e.key === 'ArrowLeft') openLightbox((currentIdx-1+galleryImages.length)%galleryImages.length);
+  });
+
+  /* ---------- testimonials carousel ---------- */
+  const testimonials = [
+    {text:"Every dish felt like it was plated with genuine pride — the lamb rack was the best I've had in years.", name:"Aanya Sharma", role:"Food Blogger", stars:5},
+    {text:"The ambience alone is worth the visit, but the truffle risotto sealed the deal. We'll be back every month.", name:"Daniel Okafor", role:"Regular Guest", stars:5},
+    {text:"From the moment we walked in, the staff treated us like royalty — quite literally. Outstanding service.", name:"Priya Nair", role:"Anniversary Dinner", stars:5},
+    {text:"Their weekend brunch has become our family ritual. The eggs benedict is unmatched in the city.", name:"Marcus Lee", role:"Local Guide", stars:4},
+    {text:"A hidden gem for special occasions. The dessert selection alone deserves its own visit.", name:"Sophia Martinez", role:"Event Planner", stars:5},
+  ];
+  const tTrack = document.getElementById('t-track');
+  const tDots = document.getElementById('t-dots');
+  testimonials.forEach((t,i) => {
+    const stars = Array.from({length:5}, (_,s) => `<i class="fa-solid fa-star${s < t.stars ? '' : '-o'}"></i>`).join('');
+    const slide = document.createElement('div');
+    slide.className = 't-slide text-center';
+    slide.innerHTML = `
+      <p class="font-display text-xl sm:text-2xl italic leading-relaxed mb-6">"${t.text}"</p>
+      <div class="stars flex justify-center gap-1 mb-3">${stars}</div>
+      <p class="font-medium">${t.name}</p>
+      <p class="text-sm text-[var(--c-text-soft)]">${t.role}</p>`;
+    tTrack.appendChild(slide);
+    const dot = document.createElement('span');
+    dot.className = 't-dot' + (i===0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    tDots.appendChild(dot);
+  });
+  let tIndex = 0;
+  function goToSlide(i){
+    tIndex = (i+testimonials.length)%testimonials.length;
+    tTrack.style.transform = `translateX(-${tIndex*100}%)`;
+    document.querySelectorAll('.t-dot').forEach((d,di) => d.classList.toggle('active', di===tIndex));
+  }
+  document.getElementById('t-prev').addEventListener('click', () => goToSlide(tIndex-1));
+  document.getElementById('t-next').addEventListener('click', () => goToSlide(tIndex+1));
+  let tAuto = setInterval(() => goToSlide(tIndex+1), 6000);
+  document.getElementById('reviews').addEventListener('mouseenter', () => clearInterval(tAuto));
+  document.getElementById('reviews').addEventListener('mouseleave', () => tAuto = setInterval(() => goToSlide(tIndex+1), 6000));
+
+  /* ---------- reservation form ---------- */
+  const resDate = document.getElementById('res-date');
+  if(resDate) resDate.min = new Date().toISOString().split('T')[0];
+  const resForm = document.getElementById('reservation-form');
+  resForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    resForm.classList.add('hidden');
+    document.getElementById('reservation-success').classList.remove('hidden');
+  });
+  document.getElementById('res-reset').addEventListener('click', () => {
+    resForm.reset();
+    resForm.classList.remove('hidden');
+    document.getElementById('reservation-success').classList.add('hidden');
+  });
+
+  /* ---------- contact form ---------- */
+  function showToast(msg){
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3800);
+  }
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    showToast('Message sent — our team will reply within 24 hours.');
+    e.target.reset();
+  });
+
+  /* ---------- newsletter ---------- */
+  document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = e.target.querySelector('input');
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+    const msg = document.getElementById('newsletter-msg');
+    msg.textContent = valid ? 'Subscribed! Welcome to the Royal table.' : 'Please enter a valid email.';
+    if(valid) input.value = '';
+  });
+
+  /* ---------- back to top ---------- */
+  backTop.addEventListener('click', () => window.scrollTo({top:0, behavior: reduced ? 'auto' : 'smooth'}));
+
+  /* ---------- year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
