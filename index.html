@@ -92,7 +92,11 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  /* FIX (4): overflow-x:hidden was only on <body> before; some mobile
+     browsers still allow horizontal scroll/scrollbar via <html> itself
+     (e.g. when the hero-float badges or wide tables peek past the edge),
+     so it's added here too as a safety net against that stray scrollbar. */
+  html{scroll-behavior:smooth; overflow-x:hidden;}
   body{
     background:var(--c-bg);
     color:var(--c-text);
@@ -104,9 +108,16 @@
   ::selection{background:var(--c-gold); color:#0b0a09;}
 
   /* scrollbar */
+  /* FIX (4): the gold scrollbar styling only worked in Chrome/Edge/Safari
+     (::-webkit-scrollbar). Firefox ignores those and was showing its
+     default system scrollbar, which looked like a styling "issue" next to
+     the rest of the gold-on-dark theme. scrollbar-width/scrollbar-color
+     give Firefox the same look. */
+  html{ scrollbar-width: thin; scrollbar-color: var(--c-gold-deep) var(--c-bg);}
   ::-webkit-scrollbar{width:10px;}
   ::-webkit-scrollbar-track{background:var(--c-bg);}
   ::-webkit-scrollbar-thumb{background:var(--c-gold-deep); border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--c-gold);}
 
   h1,h2,h3,h4,.font-display{font-family:'Cormorant Garamond',serif;}
 
@@ -157,6 +168,9 @@
   .btn-ghost-sm:hover{ background:var(--c-gold); border-color:var(--c-gold); color:#161310;}
 
   /* ============ NAVBAR ============ */
+  /* NOTE (1): sticky navbar kept exactly as-is — position:fixed + top:0
+     below already makes it stick through the whole page; nothing here
+     was changed for that part of the request. */
   #navbar{
     position:fixed; top:0; left:0; right:0; z-index:50;
     background:var(--nav-bg); backdrop-filter:blur(14px);
@@ -164,10 +178,11 @@
     transition:background .4s ease, padding .4s ease, border-color .4s ease;
     padding:1.1rem 0;
   }
-  #navbar > div{
-  padding-left: 1.25rem;
-  padding-right: 5.5rem;
-}
+  /* FIX (3): removed the old fixed `padding-right:5.5rem` — it was squeezing
+     the nav links into too little space, which is why the full menu kept
+     getting clipped/hidden on regular desktop/laptop widths and the hamburger
+     showed up instead. The outer wrapper already has balanced px-5/px-8
+     padding from Tailwind, so we don't need this override anymore. */
   #navbar.scrolled{
     background:var(--c-bg); border-bottom:1px solid var(--c-border); padding:.65rem 0;
     box-shadow:0 10px 30px -15px var(--c-shadow);
@@ -178,6 +193,16 @@
     transition:width .35s ease;
   }
   .nav-link:hover::after, .nav-link.active::after{ width:100%;}
+
+  /* FIX (3): on the md breakpoint (tablet/small laptop, 768px+) the full nav
+     now shows instead of the hamburger. We tighten the gap and font-size a
+     touch at this size so "Home, About, Menu, Offers, Gallery, Reviews,
+     Contact" all fit on one line without crowding; from lg (1024px+) up it
+     relaxes back to the original spacing. */
+  @media (min-width:768px) and (max-width:1023px){
+    .nav-link{ font-size:.78rem;}
+    nav.main-nav{ gap:1.1rem !important;}
+  }
 
   .logo-crest circle, .logo-crest text{ stroke:var(--c-gold); fill:var(--c-gold);}
 
@@ -229,6 +254,15 @@
     animation:scrollDot 1.8s ease-in-out infinite;
   }
   @keyframes scrollDot{ 0%{opacity:1; top:7px;} 70%{opacity:0; top:20px;} 100%{opacity:0; top:7px;} }
+
+  /* FIX (2): the floating "Scroll" cue sits at a fixed bottom:28px, but on
+     shorter/landscape screens the centered hero text + buttons can grow
+     tall enough to reach right down to it, causing the overlap. We give the
+     cue a safe top margin via the hero padding below, and simply hide it
+     once the viewport is too short for both to comfortably fit. */
+  @media (max-height:700px){
+    .scroll-cue{ display:none;}
+  }
 
   /* ============ SECTIONS GENERIC ============ */
   .surface{ background:var(--c-surface); border:1px solid var(--c-border);}
@@ -306,7 +340,11 @@
   #lightbox img{ max-height:82vh; max-width:88vw; border-radius:6px; box-shadow:0 30px 80px rgba(0,0,0,0.6);}
 
   /* ============ TESTIMONIALS ============ */
-  .t-track{ display:flex; transition:transform .6s cubic-bezier(.65,0,.35,1);}
+  .t-track{ display:flex; transition:transform .6s cubic-bezier(.65,0,.35,1); cursor:grab; touch-action:pan-y;}
+  /* FIX (5): cursor:grab signals the track is swipeable/draggable now (see
+     the drag/swipe JS below); touch-action:pan-y lets the browser still
+     scroll the page vertically while we handle horizontal swipes ourselves. */
+  .t-track.dragging{ cursor:grabbing; transition:none;}
   .t-slide{ min-width:100%; padding:0 .5rem;}
   .stars i{ color:var(--c-gold); font-size:.85rem;}
   .t-dot{ width:8px; height:8px; border-radius:50%; background:var(--c-border); cursor:pointer; transition:all .3s ease;}
@@ -399,7 +437,11 @@
       </div>
     </a>
 
-    <nav class="hidden lg:flex items-center gap-9">
+    <!-- FIX (3): "lg:flex" -> "md:flex" so the full link list is visible from
+         tablet/small-laptop widths upward, instead of collapsing into the
+         hamburger until 1024px. Added main-nav class for the tightening
+         media query above. -->
+    <nav class="hidden md:flex items-center gap-5 lg:gap-9 main-nav">
       <a href="#hero" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#menu" class="nav-link">Menu</a>
@@ -414,7 +456,9 @@
         <i class="fa-solid fa-moon" id="theme-icon"></i>
       </button>
       <a href="#reservation" class="btn-gold hidden md:inline-flex !py-2 !px-5 text-sm">Book a Table</a>
-      <button id="menu-open" class="lg:hidden text-2xl" style="color:var(--c-gold)" aria-label="Open menu">
+      <!-- FIX (3): "lg:hidden" -> "md:hidden" so the hamburger only appears
+           below 768px (true mobile), matching the nav above. -->
+      <button id="menu-open" class="md:hidden text-2xl" style="color:var(--c-gold)" aria-label="Open menu">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
@@ -449,7 +493,10 @@
     <span>Open daily · 9:00 AM – 11:00 PM</span>
   </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+  <!-- FIX (2): added pb-16 (extra bottom padding) so the "Book a Table" /
+       "View Menu" buttons keep clear space above the Scroll indicator
+       instead of butting up against it when the hero text wraps. -->
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center pb-16">
     <p class="eyebrow justify-center mb-6" data-aos="fade-up">Welcome to Royal Cafe &amp; Restaurant</p>
     <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mb-6" data-aos="fade-up" data-aos-delay="120">
       An Exquisite Dining<br> Experience, <span class="shimmer-text italic">Truly Fit for Royalty</span>
@@ -998,6 +1045,52 @@
   let tAuto = setInterval(() => goToSlide(tIndex+1), 6000);
   document.getElementById('reviews').addEventListener('mouseenter', () => clearInterval(tAuto));
   document.getElementById('reviews').addEventListener('mouseleave', () => tAuto = setInterval(() => goToSlide(tIndex+1), 6000));
+
+  /* FIX (5): swipe/drag support for testimonials.
+     Works with both touch (phones/tablets) and mouse (click-drag on
+     desktop). We track the start X position, follow the finger/cursor
+     live while dragging (so it feels responsive), then on release decide
+     whether the drag crossed a threshold to commit to the next/previous
+     slide or snap back to the current one. */
+  let dragStartX = 0;
+  let dragDeltaX = 0;
+  let isDragging = false;
+  const trackWidth = () => tTrack.parentElement.getBoundingClientRect().width;
+
+  function dragStart(x){
+    isDragging = true;
+    dragStartX = x;
+    dragDeltaX = 0;
+    clearInterval(tAuto); // pause autoplay while the user is interacting
+    tTrack.classList.add('dragging');
+  }
+  function dragMove(x){
+    if(!isDragging) return;
+    dragDeltaX = x - dragStartX;
+    const basePercent = -tIndex*100;
+    const dragPercent = (dragDeltaX/trackWidth())*100;
+    tTrack.style.transform = `translateX(${basePercent+dragPercent}%)`;
+  }
+  function dragEnd(){
+    if(!isDragging) return;
+    isDragging = false;
+    tTrack.classList.remove('dragging');
+    const movedPercent = (dragDeltaX/trackWidth())*100;
+    if(movedPercent < -12){ goToSlide(tIndex+1); }
+    else if(movedPercent > 12){ goToSlide(tIndex-1); }
+    else{ goToSlide(tIndex); } // snap back to current slide
+    tAuto = setInterval(() => goToSlide(tIndex+1), 6000); // resume autoplay
+  }
+
+  // Touch events (mobile/tablet swipe)
+  tTrack.addEventListener('touchstart', (e) => dragStart(e.touches[0].clientX), {passive:true});
+  tTrack.addEventListener('touchmove', (e) => dragMove(e.touches[0].clientX), {passive:true});
+  tTrack.addEventListener('touchend', dragEnd);
+
+  // Mouse events (desktop click-and-drag)
+  tTrack.addEventListener('mousedown', (e) => { e.preventDefault(); dragStart(e.clientX); });
+  window.addEventListener('mousemove', (e) => dragMove(e.clientX));
+  window.addEventListener('mouseup', dragEnd);
 
   /* ---------- reservation form ---------- */
   const resDate = document.getElementById('res-date');
